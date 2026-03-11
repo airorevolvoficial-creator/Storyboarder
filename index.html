@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Video Storyboarder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --studio-950: #ffffff;
+        --studio-900: #f8fafc;
+        --studio-800: #f1f5f9;
+        --studio-700: #e2e8f0;
+        --studio-600: #cbd5e1;
+        --studio-500: #94a3b8;
+        --studio-accent: #f59e0b;
+        --studio-accent-hover: #d97706;
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --text-muted: #64748b;
+        --border-main: #e2e8f0;
+      }
+
+      .dark {
+        --studio-950: #0a0a0a;
+        --studio-900: #121212;
+        --studio-800: #1e1e1e;
+        --studio-700: #2d2d2d;
+        --studio-600: #3d3d3d;
+        --studio-500: #525252;
+        --studio-accent: #f59e0b;
+        --studio-accent-hover: #d97706;
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-muted: #94a3b8;
+        --border-main: #1e1e1e;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              studio: {
+                950: 'var(--studio-950)',
+                900: 'var(--studio-900)',
+                800: 'var(--studio-800)',
+                700: 'var(--studio-700)',
+                600: 'var(--studio-600)',
+                500: 'var(--studio-500)',
+                accent: 'var(--studio-accent)',
+                accentHover: 'var(--studio-accent-hover)',
+                blue: '#3b82f6',
+                red: '#ef4444',
+              },
+              content: {
+                primary: 'var(--text-primary)',
+                secondary: 'var(--text-secondary)',
+                muted: 'var(--text-muted)',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.574.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-studio-950 text-content-primary font-sans antialiased min-h-screen selection:bg-studio-accent selection:text-black transition-colors duration-200">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
